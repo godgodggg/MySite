@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ГеймерПРО</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav_header_container">
+        <a href="/developers.html" class="nav_item" target="_blank" rel="noopener noreferrer">Разработчикам</a>
+        <a href="/authors.html" class="nav_item" target="_blank" rel="noopener noreferrer">Авторам</a>
+        <a href="/gamers.html" class="nav_item" target="_blank" rel="noopener noreferrer">Геймерам</a>
+        <a href="/investors.html"class="nav_item"target="_blank"rel="noopener noreferrer">Инвесторам</a>
+        <a href="/ad.html"class="nav_item"target="_blank"rel="noopener noreferrer">Реклама</a>
+      </div>
+    </div>
+    </header>
+    <div class="container">
+      <div class="header_menu">
+        <a class="logo" href="index.html">ГеймерПРО</a>
+        <button class="header_catolog">
+          <img src="/media/menu.png" class="header_catolog_img" />Каталог
+        </button>
+        <form class="form_class">
+          <input type="text" name="q" placeholder="Поиск..." class="header_nav_input">
+        </form>
+        <a class="Header_lk" href="">Личный кабинет</a> 
+        <div class="log_reg">
+          <a class="header_login" href="">Вход</a>
+          <a class="header_register" href="">Регистрация</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="slider-wrapper">
+        <div class="arrow left" id="prevBtn"></div>
+        <div class="arrow right" id="nextBtn"></div>
+        <div class="slider-container">
+          <!-- Слайдер -->
+          <div class="slider" id="slider">
+            <!-- Слайд 1 -->
+            <div class="slide">
+              <div class="slide-content">
+                <div class="slide-image">
+                  <img src="/media/repo.png" alt="repo" />
+                </div>
+                <div class="slide-info">
+                  <h2 class="slide-title">REPO</h2>
+                  <p class="slide-description">
+                    Онлайн-игра в жанре хоррор с кооперативным режимом до 6
+                    игроков. Находите ценные, полностью реалистичные объекты и
+                    обращайтесь с ними бережно, извлекая и отбирая их, чтобы
+                    удовлетворить желания своего создателя.
+                  </p>
+                  <div class="slide-price">300 ₽</div>
+                  <button class="slide-button">Добавить в корзину</button>
+                </div>
+              </div>
+            </div>
+
+             
+            <div class="slide">
+              <div class="slide-content">
+                <div class="slide-image">
+                  <img src="/media/terraria.png" alt="terraria" />
+                </div>
+                <div class="slide-info">
+                  <h2 class="slide-title">Terraria</h2>
+                  <p class="slide-description">
+                    Копайте, сражайтесь, исследуйте, стройте! Нет ничего
+                    невозможного в этой насыщенной событиями приключенческой игре.
+                    Также доступен комплект для четверых!
+                  </p>
+                  <div class="slide-price">590 ₽</div>
+                  <button class="slide-button">Добавить в корзину</button>
+                </div>
+              </div>
+            </div> 
+
+           
+            <div class="slide">
+              <div class="slide-content">
+                <div class="slide-image">
+                  <img src="/media/dota.png" alt="dota2" />
+                </div>
+                <div class="slide-info">
+                  <h2 class="slide-title">Dota 2</h2>
+                  <p class="slide-description">
+                    Ежедневно миллионы игроков по всему миру сражаются от лица
+                    одного из более сотни героев Dota 2, и даже после тысячи часов
+                    в ней есть чему научиться.
+                  </p>
+                  <div class="slide-price">Бесплатно</div>
+                  <button class="slide-button">Добавить в корзину</button>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+          
+          <div class="indicators" id="indicators">
+            <div class="indicator active" data-slide="0"></div>
+            <div class="indicator" data-slide="1"></div>
+            <div class="indicator" data-slide="2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <script>
+        
+        const slider = document.getElementById('slider');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicators = document.querySelectorAll('.indicator');
+
+       
+        let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.slide').length;
+
+       
+        function updateSlider() {
+          
+          const offset = -currentSlide * 100;
+          slider.style.transform = `translateX(${offset}%)`;
+
+          
+          indicators.forEach((indicator, index) => {
+            if (index === currentSlide) {
+              indicator.classList.add('active');
+            } else {
+              indicator.classList.remove('active');
+            }
+          });
+        }
+
+        
+        prevBtn.addEventListener('click', () => {
+          if (currentSlide === 0) {
+            currentSlide = totalSlides - 1;
+          } else {
+            currentSlide--;
+          }
+          updateSlider();
+        });
+
+        nextBtn.addEventListener('click', () => {
+          if (currentSlide === totalSlides - 1) {
+            currentSlide = 0;
+          } else {
+            currentSlide++;
+          }
+          updateSlider();
+        });
+
+        indicators.forEach((indicator) => {
+          indicator.addEventListener('click', () => {
+            currentSlide = parseInt(indicator.getAttribute('data-slide'));
+            updateSlider();
+          });
+        });
+      </script>
+      <div class="container">
+        <div class="two_blocks">
+        <div class="ferst_block">
+          <div class="ganre">
+            Жанры
+            <div class="genres">
+              <button class="genre_btn">Экшен</button>
+              <button class="genre_btn">Кооператив</button>
+              <button class="genre_btn">Хоррор</button>
+              <button class="genre_btn">Выживание</button>
+              <button class="genre_btn">Сюжет</button>
+              <button class="genre_btn">Симулятор</button>
+            </div>
+          </div>
+          <div class="genre_finder">
+            <form class="genre_form">
+              <input class="genre_form_input" name="q" placeholder="Поиск по жанрам...">
+            </form>
+          </div>
+        </div>
+        <div class="second_block">
+          <h2>Почему мы?</h2>
+          <p>
+            1. Привлекательные цены
+          <br>2. Ежемесячные акции
+          <br>3. Круглосуточная поддержка
+          <br>4. Быстрая покупка
+        </p>
+        </div>
+      </div>
+      </div>
+  </body>
+</html>
