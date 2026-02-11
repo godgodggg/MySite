@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="menu">
       <div class="nav_header_container">
         <a href="/developers.html" class="nav_item" target="_blank" rel="noopener noreferrer">Разработчикам</a>
         <a href="/authors.html" class="nav_item" target="_blank" rel="noopener noreferrer">Авторам</a>
@@ -26,7 +26,7 @@
         <button class="header_catolog">
           <img src="/media/menu.png" class="header_catolog_img" />Каталог
         </button>
-        <form class="form_class">
+        <form class="form_class" id="finder">
           <input type="text" name="q" placeholder="Поиск..." class="header_nav_input">
         </form>
         <a class="Header_lk" href="">Личный кабинет</a> 
@@ -197,85 +197,150 @@
       </div>
       </div>
       <div class="container">
+        <div class="Popular_title">
+        <h1>ПОПУЛЯРНОЕ</h1>
         <div class="Popular">
           <div class="game_card">
-            
             <img src="/media/games/cs.png" class="game_card_img">
-            <h2>name</h2>
-            <p>Описание</p>
+            <h2>Counter-Strike 2</h2>
+            <p>игра в жанре многопользовательского тактического шутера от первого лица, разработанная компанией Valve.</p>
             <button class="card_btn">Купить</button>
           </div>
           <div class="game_card">
             <img src="/media/games/darksouls.png" class="game_card_img">
-            <h2>name</h2>
-            <p>Описание</p>
+            <h2>Dark Souls III</h2>
+            <p> игра в жанре Action RPG, разработанная компанией FromSoftware для платформ Windows, PlayStation 4 и Xbox One</p>
             <button class="card_btn">Купить</button>
           </div>
           <div class="game_card">
             <img src="/media/games/fortnite.png" class="game_card_img">
-            <h2>name</h2>
-            <p>Описание</p>
+            <h2>Fortnite</h2>
+            <p>игра в жанрах симулятора выживания и королевской битвы. Разработана американской компанией Epic Games совместно с People Can Fly.</p>
             <button class="card_btn">Купить</button>
           </div>
           <div class="game_card">
             <img src="/media/games/gate.png" class="game_card_img">
-            <h2>name</h2>
-            <p>Описание</p>
+            <h2>Baldur’s Gate</h2>
+            <p>серия компьютерных ролевых игр во вселенной настольной игры Dungeons & Dragons</p>
             <button class="card_btn">Купить</button>
           </div>
           <div class="game_card">
             <img src="/media/games/gta.png" class="game_card_img">
-            <h2>name</h2>
-            <p>Описание</p>
+            <h2>GTA 5</h2>
+            <p>игра в жанре action-adventure с открытым миром из серии Grand Theft Auto, разработанная компанией Rockstar North и изданная компанией Rockstar Games.</p>
             <button class="card_btn">Купить</button>
           </div>
           <div class="game_card">
             <img src="/media/games/hades.png" class="game_card_img">
-            <h2>name</h2>
-            <p>Описание</p>
+            <h2>Hades</h2>
+            <p> игра в жанрах roguelike и action/RPG, разработанная и выпущенная американской студией Supergiant Games.</p>
             <button class="card_btn">Купить</button>
           </div>
           <div class="game_card">
             <img src="/media/games/lol.png" class="game_card_img">
-            <h2>name</h2>
-            <p>Описание</p>
+            <h2>League of Legends</h2>
+            <p>игра в жанре MOBA. Разработана и выпущена американской компанией Riot Games в 2009 году для платформ Microsoft Windows и macOS. </p>
             <button class="card_btn">Купить</button>
           </div>
           <div class="game_card">
             <img src="/media/games/mine.png" class="game_card_img">
-            <h2>name</h2>
-            <p>Описание</p>
+            <h2>Minecraft</h2>
+            <p>Игра-песочница с миром из блоков. Компанией Mojang Studios. Первоначально выпущена в 2009 году, официально выпущена в 2011 году</p>
             <button class="card_btn">Купить</button>
           </div>
           <div class="game_card">
             <img src="/media/games/ow.png" class="game_card_img">
-            <h2>name</h2>
-            <p>Описание</p>
+            <h2>Overwatch 2</h2>
+            <p>игра в жанре шутера от первого лица, разработанная и изданная компанией Blizzard Entertainment</p>
             <button class="card_btn">Купить</button>
           </div>
           <div class="game_card">
             <img src="/media/games/wedmac.png" class="game_card_img">
-            <h2>name</h2>
-            <p>Описание</p>
+            <h2>The Witcher</h2>
+            <p>серия ролевых игр в жанре фэнтези от польской студии CD Projekt RED. Основана на одноимённой серии книг </p>
             <button class="card_btn">Купить</button>
           </div>
         </div>
       </div>
+      </div>
       <div class="container">
         <div class="parniers">
+          <h1>Партнеры</h1>
           <div class="partnier_card">
           <button class="partnier_card_btn">
             <img src="/media/linux.jpg" class="Partnier_card_img">
-            <h2>Linux Mint</h2>
-            <p>Описание</p>
+            <p>бесплатный дистрибутив Linux, развиваемый сообществом. Основан на Ubuntu и Debian.</p>
           </button>
-          <button class="partnier_card">
-            <img src="/media/linux.jpg" class="Partnier_card_img">
-            <h2>Linux Mint</h2>
-            <p>Описание</p>
+          <button class="partnier_card_btn">
+            <img src="/media/max.jpg" class="Partnier_card_img">
+            <p>российский мессенджер, запущенный в 2025 году компанией VK.</p>
+          </button>
+          <button class="partnier_card_btn">
+            <img src="/media/vk.png" class="Partnier_card_img">
+            <p>Социальная сеть в России и странах СНГ</p>
           </button>
           </div>
         </div>
       </div>
+      <footer>
+        <div class="footer">
+
+
+          <div class="footer_nav">
+            <hr>
+            <h3>Навигация по сайту:</h3>
+            <hr>
+            <div class="ul_one">
+            <ul>
+            <a class="navv" href="#menu"><li>Главная</li></a>
+            <a class="navv" href="#reg"><li>Регистрация</li></a>
+            <a class="navv" href="#login"><li>Авторизация</li></a>
+            <a class="navv" href="#lk"><li>Личный кабинет</li></a>
+            <a class="navv" href="#menu"><li>Поиск
+            </ul>
+          </div>
+          </div>
+
+
+          <div class="footer_nav">
+            <hr>
+            <h3>Контакты:</h3>
+            <hr>
+            <div class="ul_two">
+            <a class="navv">Телефон (8-800-999-55-99)</a>
+            <a class="navv">Е-маил: <u>gamerpro@gmail.com</u></a>
+          </div>
+          </div>
+          
+          <div class="footer_nav">
+            <hr>
+            <h3>Клиентам</h3>
+            <hr>
+            <div class="ul_forth">
+            <a class="navv">Здесь скоро что-то появится...</a>
+          </div>
+          </div>
+
+            <div class="footer_nav">
+            <hr>
+            <h3>Партнерам</h3>
+            <hr>
+            <div class="ul_fi">
+            <a class="navv" >Здесь скоро что-то появится...</a>
+          </div>
+          </div>
+
+          <div class="footer_nav">
+            <hr>
+            <h3>О нас:</h3>
+            <hr>
+            <div class="ul_last">
+            <p>Магазин игр предлагает уникальные игровые продукты, которые приносят пользу клиентам и отличают нас от конкурентов.</p>
+          </div>
+          </div>
+
+
+        </div>
+      </footer>
   </body>
 </html>
