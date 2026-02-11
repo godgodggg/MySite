@@ -466,6 +466,9 @@ h6 {
   justify-content: center;
   padding: 20px;
   gap: 30px;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .footer_nav {
@@ -519,4 +522,110 @@ h6 {
   display: flex;
   flex-direction: column;
   opacity: 0.4;
+}
+
+.ottt {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.history_store {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-self: center;
+  margin: 20px;
+  padding: 10px;
+  background-color: var(--color-white-grey);
+  text-align: start;
+  border-radius: 10px;
+  border: 3px solid var(--color-purple);
+  box-shadow: 1px 1px var(--color-purple-textL);
+  gap: 10px;
+}
+
+.history_store h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.history_block {
+  background-color: var(--color-grey);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.setting {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  margin: 20px;
+  padding: 10px;
+  background-color: var(--color-white-grey);
+  text-align: center;
+  border-radius: 10px;
+  border: 3px solid var(--color-purple);
+  box-shadow: 1px 1px var(--color-purple-textL);
+}
+.settingq {
+  cursor: pointer;
+}
+
+.login_site {
+  justify-self: center;
+  margin: 20px;
+  padding: 10px;
+  background-color: var(--color-white-grey);
+  text-align: center;
+  border-radius: 10px;
+  border: 3px solid var(--color-purple);
+  box-shadow: 1px 1px var(--color-purple-textL);
+}
+
+.login_site h2 {
+}
+
+.input_title {
+  margin: 20px 10px;
+}
+
+.login_site_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-dark-grey);
+  border-radius: 10px;
+  color: #6a5acd;
+}
+
+.login_input {
+  width: 300px;
+  height: 25px;
+  justify-content: center;
+  background-color: var(--color-dark-grey);
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding-left: 15px;
+  text-align: center;
+}
+
+.log-in_btn {
+  margin-bottom: 20px;
+  font-size: 20px;
+  padding: 3px 25px;
+  background-color: var(--color-purple);
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid var(--color-dark-purple);
+  margin-top: 10px;
+}
+
+.login_site p {
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+.checkbox {
 }
